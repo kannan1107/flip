@@ -16,7 +16,7 @@ let lockBoard = false;
 let matches = 0;
 let cardArray = [...cards,...cards];
 cardArray.sort(()=>0.5-Math.random());
-const gameBoard = document.querySelector(".memory-game");
+const gameBoard = document.querySelector(".game");
 
 function createCard(card) {
   const cardElement = document.createElement("div");

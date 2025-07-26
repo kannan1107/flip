@@ -1,0 +1,118 @@
+body {
+position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(22, 165, 218);
+  flex-direction: column;
+}
+
+.memory-game {
+  position: absolute;
+  width: 45vw;
+  height: 45vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  left: 450px;
+  background-color: #7ae182;
+  margin: 2px;
+}
+
+.card {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+  box-shadow: 10px gold;
+  
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+.front-face img {
+  width: 100%;
+}
+.back-face {
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.back-face img {
+  width: 100%;
+  height: 100%;
+}
+.winning-message {
+  position:absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(11, 190, 217, 0.8);
+  color: #06e518;
+  position: absolute;
+  width: 30vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 40px;
+  z-index: 1000;
+  top: 450px;
+  left: 550px;
+ }
+ .winning-message.show {
+  display: flex;
+ }
+
+ #resetButton {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: x-large;
+  color:darkcyan;
+  
+  top: 400px;
+  left: 1200px;
+ }
+ #moveCounter {
+  position: absolute;
+  color: whitesmoke;
+  left: 100px;
+  top: 400px;
+ }
+ #timer {
+  position: absolute;
+  color: whitesmoke;
+  width: 140px;
+  top: 400px;
+  left: 300px;
+
+ }
+ .gameInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 37vw;
+  font-size: x-large;
+  font-weight: bold;
+ }
